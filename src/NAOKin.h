@@ -27,16 +27,16 @@ private:
   AL::ALMotionProxy almotion;
   AL::ALRobotPostureProxy alposture;
 
-  struct InterpolationValues
+  struct InterpolationValues //Struct that represents any moviments 
   {
     vector<string> names;
     vector<vector<float> > angles;
     vector<vector<float> > times;
   };
 
-  map<string, InterpolationValues> m_interpolations;
+  map<string, InterpolationValues> m_interpolations; //Container of elements: key - value
 
-  vector<pair<string, string> > m_motion_filenames;
+  vector<pair<string, string> > m_motion_filenames; //Vector os pairs to populate map container
 
   void parseMotionFile(string filename, string key);
 
