@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/Development/tp/development/cppCodes/NAOKin
+CMAKE_SOURCE_DIR = /home/user/Development/rinobot/codigos/projetos/trainee/NAO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/Development/tp/development/cppCodes/NAOKin/build-rinobot-robot
+CMAKE_BINARY_DIR = /home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,6 +79,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"runtime\""
@@ -101,17 +112,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Development/tp/development/cppCodes/NAOKin/build-rinobot-robot/CMakeFiles /home/user/Development/tp/development/cppCodes/NAOKin/build-rinobot-robot/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles /home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Development/tp/development/cppCodes/NAOKin/build-rinobot-robot/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,17 +157,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named naoKin
+# Target rules for targets named nao
 
 # Build rule for target.
-naoKin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 naoKin
-.PHONY : naoKin
+nao: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nao
+.PHONY : nao
 
 # fast build rule for target.
-naoKin/fast:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/build
-.PHONY : naoKin/fast
+nao/fast:
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/build
+.PHONY : nao/fast
 
 main.o: main.cpp.o
 
@@ -175,7 +175,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -184,7 +184,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -193,35 +193,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/NAOKin.o: src/NAOKin.cpp.o
+src/NAO.o: src/NAO.cpp.o
 
-.PHONY : src/NAOKin.o
+.PHONY : src/NAO.o
 
 # target to build an object file
-src/NAOKin.cpp.o:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/NAOKin.cpp.o
-.PHONY : src/NAOKin.cpp.o
+src/NAO.cpp.o:
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/NAO.cpp.o
+.PHONY : src/NAO.cpp.o
 
-src/NAOKin.i: src/NAOKin.cpp.i
+src/NAO.i: src/NAO.cpp.i
 
-.PHONY : src/NAOKin.i
+.PHONY : src/NAO.i
 
 # target to preprocess a source file
-src/NAOKin.cpp.i:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/NAOKin.cpp.i
-.PHONY : src/NAOKin.cpp.i
+src/NAO.cpp.i:
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/NAO.cpp.i
+.PHONY : src/NAO.cpp.i
 
-src/NAOKin.s: src/NAOKin.cpp.s
+src/NAO.s: src/NAO.cpp.s
 
-.PHONY : src/NAOKin.s
+.PHONY : src/NAO.s
 
 # target to generate assembly for a file
-src/NAOKin.cpp.s:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/NAOKin.cpp.s
-.PHONY : src/NAOKin.cpp.s
+src/NAO.cpp.s:
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/NAO.cpp.s
+.PHONY : src/NAO.cpp.s
 
 src/Timer.o: src/Timer.cpp.o
 
@@ -229,7 +229,7 @@ src/Timer.o: src/Timer.cpp.o
 
 # target to build an object file
 src/Timer.cpp.o:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/Timer.cpp.o
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/Timer.cpp.o
 .PHONY : src/Timer.cpp.o
 
 src/Timer.i: src/Timer.cpp.i
@@ -238,7 +238,7 @@ src/Timer.i: src/Timer.cpp.i
 
 # target to preprocess a source file
 src/Timer.cpp.i:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/Timer.cpp.i
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/Timer.cpp.i
 .PHONY : src/Timer.cpp.i
 
 src/Timer.s: src/Timer.cpp.s
@@ -247,62 +247,8 @@ src/Timer.s: src/Timer.cpp.s
 
 # target to generate assembly for a file
 src/Timer.cpp.s:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/Timer.cpp.s
+	$(MAKE) -f CMakeFiles/nao.dir/build.make CMakeFiles/nao.dir/src/Timer.cpp.s
 .PHONY : src/Timer.cpp.s
-
-src/external/Kofinas/NAOKinematics.o: src/external/Kofinas/NAOKinematics.cpp.o
-
-.PHONY : src/external/Kofinas/NAOKinematics.o
-
-# target to build an object file
-src/external/Kofinas/NAOKinematics.cpp.o:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematics.cpp.o
-.PHONY : src/external/Kofinas/NAOKinematics.cpp.o
-
-src/external/Kofinas/NAOKinematics.i: src/external/Kofinas/NAOKinematics.cpp.i
-
-.PHONY : src/external/Kofinas/NAOKinematics.i
-
-# target to preprocess a source file
-src/external/Kofinas/NAOKinematics.cpp.i:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematics.cpp.i
-.PHONY : src/external/Kofinas/NAOKinematics.cpp.i
-
-src/external/Kofinas/NAOKinematics.s: src/external/Kofinas/NAOKinematics.cpp.s
-
-.PHONY : src/external/Kofinas/NAOKinematics.s
-
-# target to generate assembly for a file
-src/external/Kofinas/NAOKinematics.cpp.s:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematics.cpp.s
-.PHONY : src/external/Kofinas/NAOKinematics.cpp.s
-
-src/external/Kofinas/NAOKinematicsJacobian.o: src/external/Kofinas/NAOKinematicsJacobian.cpp.o
-
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.o
-
-# target to build an object file
-src/external/Kofinas/NAOKinematicsJacobian.cpp.o:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematicsJacobian.cpp.o
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.cpp.o
-
-src/external/Kofinas/NAOKinematicsJacobian.i: src/external/Kofinas/NAOKinematicsJacobian.cpp.i
-
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.i
-
-# target to preprocess a source file
-src/external/Kofinas/NAOKinematicsJacobian.cpp.i:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematicsJacobian.cpp.i
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.cpp.i
-
-src/external/Kofinas/NAOKinematicsJacobian.s: src/external/Kofinas/NAOKinematicsJacobian.cpp.s
-
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.s
-
-# target to generate assembly for a file
-src/external/Kofinas/NAOKinematicsJacobian.cpp.s:
-	$(MAKE) -f CMakeFiles/naoKin.dir/build.make CMakeFiles/naoKin.dir/src/external/Kofinas/NAOKinematicsJacobian.cpp.s
-.PHONY : src/external/Kofinas/NAOKinematicsJacobian.cpp.s
 
 # Help Target
 help:
@@ -312,26 +258,20 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... install/strip"
-	@echo "... naoKin"
+	@echo "... nao"
+	@echo "... rebuild_cache"
 	@echo "... list_install_components"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/NAOKin.o"
-	@echo "... src/NAOKin.i"
-	@echo "... src/NAOKin.s"
+	@echo "... src/NAO.o"
+	@echo "... src/NAO.i"
+	@echo "... src/NAO.s"
 	@echo "... src/Timer.o"
 	@echo "... src/Timer.i"
 	@echo "... src/Timer.s"
-	@echo "... src/external/Kofinas/NAOKinematics.o"
-	@echo "... src/external/Kofinas/NAOKinematics.i"
-	@echo "... src/external/Kofinas/NAOKinematics.s"
-	@echo "... src/external/Kofinas/NAOKinematicsJacobian.o"
-	@echo "... src/external/Kofinas/NAOKinematicsJacobian.i"
-	@echo "... src/external/Kofinas/NAOKinematicsJacobian.s"
 .PHONY : help
 
 

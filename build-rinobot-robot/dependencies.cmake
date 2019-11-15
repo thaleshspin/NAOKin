@@ -13,6 +13,10 @@ if(_found STREQUAL "-1")
 endif()
 
 # Dependencies:
+list(FIND CMAKE_PREFIX_PATH "/home/user/.local/share/qi/toolchains/rinobot-robot/RinoLib" _found)
+if(_found STREQUAL "-1")
+  list(APPEND CMAKE_PREFIX_PATH "/home/user/.local/share/qi/toolchains/rinobot-robot/RinoLib")
+endif()
 list(FIND CMAKE_PREFIX_PATH "/home/user/Development/rinobot/codigos/coderelease/Mari/sdk/ctc-linux64-atom-2.1.4.13/acl" _found)
 if(_found STREQUAL "-1")
   list(APPEND CMAKE_PREFIX_PATH "/home/user/Development/rinobot/codigos/coderelease/Mari/sdk/ctc-linux64-atom-2.1.4.13/acl")
