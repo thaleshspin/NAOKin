@@ -1,0 +1,10 @@
+{
+    "root":
+    [
+    {
+        "name"   : "LShoulderPitch",
+        "angles" : [-0.1, 0.8],
+        "times"  : [1.0, 1,0]
+    }
+    ]
+}

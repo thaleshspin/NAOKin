@@ -1,0 +1,10 @@
+{
+    "root":
+    [
+    {
+        "name"   : "RShoulderPitch",
+        "angles" : [-0.1, 0.8],
+        "times"  : [1.0, 1.0]
+    }
+    ]
+}

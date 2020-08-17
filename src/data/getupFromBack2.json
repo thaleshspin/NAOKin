@@ -1,0 +1,52 @@
+{
+    "root":
+    [
+    {
+        "name"   : "RShoulderPitch",
+        "angles" : [2],
+        "times"  : [0.4]
+    }
+,
+    {
+        "name": "RShoulderRoll",
+        "angles": [-0.3],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "RElbowYaw",
+        "angles": [0.7],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "RElbowRoll",
+        "angles": [0.05],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "LShoulderPitch",
+        "angles": [2],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "LShoulderRoll",
+        "angles": [0.3],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "LElbowYaw",
+        "angles": [-0.7],
+        "times": [0.4]
+    }
+,
+    {
+        "name": "LElbowRoll",
+        "angles": [-0.05],
+        "times": [0.4]
+    }
+    ]
+}

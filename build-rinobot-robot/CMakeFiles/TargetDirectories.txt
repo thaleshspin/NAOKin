@@ -1,7 +1,0 @@
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/edit_cache.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/install/strip.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/nao.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/rebuild_cache.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/list_install_components.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/install/local.dir
-/home/user/Development/rinobot/codigos/projetos/trainee/NAO/build-rinobot-robot/CMakeFiles/install.dir
