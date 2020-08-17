@@ -15,7 +15,7 @@
 #include <stdarg.h>
 
 #include "Timer.h"
-#include "Motion.h"
+
 using namespace std;
 
 class NAO
